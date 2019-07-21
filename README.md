@@ -1,5 +1,4 @@
-### 中文介绍
-请查看 [README.md](https://github.com/chvin/react-tetris/blob/master/README.md)
+[README.md](https://github.com/chvin/react-tetris/blob/master/README.md)
 
 ----
 ## Use React, Redux, Immutable to code Tetris.
