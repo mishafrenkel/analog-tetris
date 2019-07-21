@@ -18,7 +18,7 @@ export default class Guide extends React.Component {
       return;
     }
     QRCode.toDataURL(location.href, { margin: 1 })
-        .then(dataUrl => this.setState({ QRCode: dataUrl }));
+      .then(dataUrl => this.setState({ QRCode: dataUrl }));
   }
   shouldComponentUpdate(state) {
     if (state.QRCode === this.state.QRCode) {
@@ -48,38 +48,18 @@ export default class Guide extends React.Component {
           </div>
         </div>
         <div className={`${style.guide} ${style.left}`}>
-          <p>
-            <a href="https://github.com/chvin/react-tetris" rel="noopener noreferrer" target="_blank" title={i18n.linkTitle[lan]}>{`${i18n.github[lan]}:`}</a><br />
-            <iframe
-              src="https://ghbtns.com/github-btn.html?user=chvin&repo=react-tetris&type=star&count=true"
-              frameBorder="0"
-              scrolling="0"
-              width="170px"
-              height="20px"
-              style={{ [transform]: 'scale(1.68)', [`${transform}Origin`]: 'center left' }}
-            />
-            <br />
-            <iframe
-              src="https://ghbtns.com/github-btn.html?user=chvin&repo=react-tetris&type=fork&count=true"
-              frameBorder="0"
-              scrolling="0"
-              width="170px"
-              height="20px"
-              style={{ [transform]: 'scale(1.68)', [`${transform}Origin`]: 'center left' }}
-            />
-          </p>
+
           <div className={style.space}>SPACE</div>
         </div>
-        { this.state.QRCode !== '' ? (
+        {this.state.QRCode !== '' ? (
           <div className={`${style.guide} ${style.qr}`}>
             <img
               src={this.state.QRCode}
               alt={i18n.QRCode[lan]}
             />
           </div>
-        ) : null }
+        ) : null}
       </div>
     );
   }
 }
-
